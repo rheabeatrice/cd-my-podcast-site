@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Podcast — Episodes</title>
+
+  <!-- Google font: Shrikhand for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#">
+        <!-- Replace with your real logo file (logo.png) -->
+        <img src="logo-placeholder.png" alt="Podcast logo" class="logo" />
+        <span class="podcast-name">My Podcast</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#" class="active">Episodes</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#articles">Articles</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="episodes" id="episodes">
+      <div class="container">
+        <div id="episodes-list">
+          <!-- Episode rows are injected here by script.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> My Podcast</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
