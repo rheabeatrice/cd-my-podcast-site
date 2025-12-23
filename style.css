@@ -1,0 +1,175 @@
+:root{
+  --accent: #E2852E;
+  --body-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --heading-font: "Shrikhand", sans-serif;
+  --max-width: 1200px;
+  --gutter: 24px;
+  --muted: #666;
+  --bg: #fff;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--body-font);
+  color:#111;
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* Header */
+.site-header{
+  width:100%;
+  border-bottom: 1px solid #eee;
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.header-inner{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:12px var(--gutter);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  color:inherit;
+}
+.logo{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  margin-right:10px;
+  border-radius:6px;
+  background:#f4f4f4;
+}
+.podcast-name{
+  font-weight:700;
+  font-size:1.1rem;
+}
+
+/* Nav */
+.site-nav ul{
+  display:flex;
+  gap:20px;
+  margin:0;
+  padding:0;
+  list-style:none;
+  align-items:center;
+}
+.site-nav a{
+  text-decoration:none;
+  color:#222;
+  font-weight:600;
+  padding:6px 8px;
+}
+.site-nav a.active{
+  color:var(--accent);
+  border-bottom:2px solid var(--accent);
+}
+
+/* Main container */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:40px var(--gutter);
+}
+
+/* Episodes list */
+.episode-row{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:48px;
+  align-items:center;
+  margin-bottom:72px;
+}
+
+/* Image column */
+.episode-image{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+.episode-image img{
+  width:100%;
+  max-width:560px;
+  height:auto;
+  display:block;
+  border-radius:2px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Content column */
+.episode-content{
+  padding:0;
+}
+.episode-date{
+  color:var(--muted);
+  font-size:0.95rem;
+  margin-bottom:14px;
+}
+
+/* Headings use Shrikhand and the accent color as requested */
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  color: var(--accent);
+  margin: 0 0 18px 0;
+  line-height: 1.05;
+  letter-spacing: 0.2px;
+}
+
+.episode-title{
+  font-size:2rem;
+  /* Title is using the Shrikhand font and accent color */
+}
+
+.episode-excerpt{
+  color:#444;
+  font-size:1rem;
+  margin:18px 0 22px 0;
+  max-width:60ch;
+}
+.read-more{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+  border-bottom:2px solid rgba(226,133,46,0.12);
+  padding-bottom:3px;
+}
+
+/* Responsive */
+@media (max-width:880px){
+  .episode-row{
+    grid-template-columns: 1fr;
+    gap:20px;
+  }
+  .episode-image img{
+    max-width:100%;
+  }
+  .episode-title{
+    font-size:1.6rem;
+  }
+}
+
+/* Footer */
+.site-footer{
+  border-top:1px solid #eee;
+  padding:24px var(--gutter);
+  margin-top:40px;
+}
+.site-footer .container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* Accessibility helpers */
+a:focus{outline:3px solid rgba(226,133,46,0.18); outline-offset:3px}
